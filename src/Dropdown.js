@@ -6,8 +6,13 @@ class Dropdown extends Component {
       this.state = { isOpened: false };
   }  
 
+  toggleState() {
+      this.setState({ isOpened: !this.state.isOpened });
+  }
+
   render() {
-    return <div>Its dropdown</div>;
+    console.log( 'isOpened', this.state.isOpened );
+    return <div onClick={this.toggleState.bind(this)}>Its dropdown</div>;
   }
 }
 
